@@ -264,3 +264,409 @@ font-size:17px;
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/* service section start */
+
+
+/** service section start */
+
+.service-home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #f4f4f4;
+}
+
+.service-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    gap: 0px; 
+}
+
+.service-home-grid .service-home-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    position: relative; 
+    height: 300px;
+    border: 4px solid #ffffff; 
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+/* --- Cyan Shine Effect on Hover --- */
+.service-home-box .shine-layer {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(68, 188, 237, 0.5), transparent);
+    transition: all 0.7s ease-in-out;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.service-home-box:hover .shine-layer {
+    left: 180%;
+}
+
+.service-home-grid .service-home-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 3;
+}
+
+.service-home-grid .service-home-box h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 6px auto 0;
+}
+
+.service-home-grid .service-home-box i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-style: normal;
+    z-index: 3;
+}
+
+/* Box Colors */
+.service-home-grid .blue-box { background-color: #f04825; }
+.service-home-grid .red-box { background-color: #f04825; }
+.service-home-grid .green-box { background-color: #f04825; }
+.service-home-grid .yellow-box { background-color: #f04825;}
+.service-home-grid .purple-box { background-color:#f04825;}
+.service-home-grid .orange-box { background-color: #f04825; }
+
+/* --- Sharp White Outline & Connecting Arrows (Exact as required) --- */
+
+/* Common Arrow Base (Colored Arrow) */
+.service-home-grid .service-home-box::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+}
+
+/* Common Outline Base (White Arrow behind) */
+.service-home-grid .service-home-box::before {
+    content: "";
+    position: absolute;
+    z-index: 5; 
+}
+
+/* 1. Blue Box Arrow (Right side points to Box 2) */
+.service-home-grid .blue-box::after {
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #f04825;
+}
+.service-home-grid .blue-box::before {
+    right: -36px; 
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 33px solid transparent; 
+    border-bottom: 33px solid transparent;
+    border-left: 33px solid #ffffff; 
+}
+
+/* 2. Red Box Arrow (Right side points to Box 3) */
+.service-home-grid .red-box::after {
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #f04825;
+}
+.service-home-grid .red-box::before {
+    right: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 33px solid transparent;
+    border-bottom: 33px solid transparent;
+    border-left: 33px solid #ffffff;
+}
+
+/* 3. Green Box Arrow (Bottom side points down to Box 6) */
+.service-home-grid .green-box::after {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #f04825;
+}
+.service-home-grid .green-box::before {
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    border-top: 33px solid #ffffff;
+}
+
+/* 4. Orange Box Arrow (Top side points up from Box 1) */
+.service-home-grid .orange-box::after {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #f04825;
+}
+.service-home-grid .orange-box::before {
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    border-bottom: 33px solid #ffffff;
+}
+
+/* 5. Purple Box Arrow (Left side points to Box 4) */
+.service-home-grid .purple-box::after {
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #f04825;
+}
+.service-home-grid .purple-box::before {
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 33px solid transparent;
+    border-bottom: 33px solid transparent;
+    border-right: 33px solid #ffffff;
+}
+
+/* 6. Yellow Box Arrow (Left side points to Box 5) */
+.service-home-grid .yellow-box::after {
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #f04825;
+}
+.service-home-grid .yellow-box::before {
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 33px solid transparent;
+    border-bottom: 33px solid transparent;
+    border-right: 33px solid #ffffff;
+}
+
+/* --- Paragraph aur Hover Read More Styling --- */
+.service-home-grid .service-home-box p {
+    font-size: 13px;
+    margin: 5px 0 15px 0;
+    opacity: 0.9;
+    line-height: 1.3;
+    z-index: 3;
+    position: relative;
+}
+
+.service-home-grid .service-home-box .hover-read-more {
+    position: absolute;
+    bottom: 20px;
+    left: 40%; 
+    transform: translateX(-10%) translateY(12px); 
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 14px; 
+    font-weight: 600;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    z-index: 25;
+}
+
+.service-home-grid .service-home-box .hover-read-more i {
+    font-size: 14px; 
+    width: auto;
+    height: auto;
+    margin: 0; 
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease; 
+    font-weight: 900; 
+}
+
+.service-home-box:hover .hover-read-more {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.service-home-box:hover .hover-read-more i {
+    transform: translateX(3px);
+}
+
+.service-home-box:hover h2 {
+    transform: translateY(-3px);
+}
+
+/* --- Expanded Modal Popup (Smooth Screen Expansion Effect) --- */
+.service-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+.service-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-modal-content {
+    background: #ffffff;
+    width: 90%;
+    max-width: 850px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.service-modal-overlay.active .service-modal-content {
+    transform: scale(1);
+}
+
+.service-modal-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-modal-img-wrap {
+    flex: 1;
+    height: 350px;
+    overflow: hidden;
+}
+
+.service-modal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-modal-text-wrap {
+    flex: 1;
+    padding: 40px;
+    color: #333;
+    text-align: left;
+}
+
+.service-modal-text-wrap h2 {
+    font-size: 24px;
+    color: #f04825;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-modal-text-wrap p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.service-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f04825;
+    color: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    transition: background 0.3s ease;
+}
+
+.service-modal-close:hover {
+    background: #333;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .service-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-modal-body {
+        flex-direction: column;
+    }
+    .service-modal-img-wrap {
+        width: 100%;
+        height: 220px;
+    }
+    .service-modal-text-wrap {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-home-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+/** service section End */
