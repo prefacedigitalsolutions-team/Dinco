@@ -121,6 +121,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }, "-=0.45");
 
 
+    // REUSABLE SCROLL ANIMATION FUNCTION
+    function initScrollAnimation(triggerEl, elementsToAnimate, options = {}) {
+        const defaultOptions = {
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+            duration: 1.1,
+            ease: "power3.out",
+            stagger: 0.12,
+            ...options
+        };
+
+        elementsToAnimate.forEach((item) => {
+            gsap.from(item.target, {
+                scrollTrigger: {
+                    trigger: triggerEl,
+                    start: defaultOptions.start,
+                    toggleActions: defaultOptions.toggleActions,
+                },
+                opacity: item.opacity !== undefined ? item.opacity : 0,
+                x: item.x || 0,
+                y: item.y || 0,
+                scale: item.scale || 1,
+                duration: item.duration || defaultOptions.duration,
+                stagger: item.stagger || defaultOptions.stagger,
+                ease: defaultOptions.ease,
+                clearProps: "opacity,transform" // Animation ke baad clean rakhne ke liye
+            });
+        });
+    }
+
+
+    // About Us Section Animation
+    initScrollAnimation(".about-section-advanced", [
+        { target: ".about-small-image-wrapper", x: -50, opacity: 0 },
+        { target: ".about-text-content", x: 50, opacity: 0 },
+        { target: ".about-large-image-wrapper", x: 50, opacity: 0 }
+    ]);
+
+    // Showcase Section Animation
+    initScrollAnimation(".showcase-section", [
+        { target: "#imageWrapper", x: -60, opacity: 0 },
+        { target: "#contentWrapper > *", x: 60, opacity: 0, stagger: 0.12 }
+    ]);
+
+
+// service section / process section animation
+    initScrollAnimation(".service-home-container", [
+        { target: ".service-home-box", y: 40, opacity: 0, stagger: 0.15 }
+    ]);
+});
+
+
 
 
 
@@ -519,78 +571,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
-// product section End home page
-
-
-
-
-
-
-
-
-
-    // scroll amimation section start 
-
-    function initScrollAnimation(triggerEl, elementsToAnimate, options = {}) {
-        const defaultOptions = {
-            start: "top 75%",
-            toggleActions: "play none none reverse",
-            duration: 1.1,
-            ease: "power3.out",
-            stagger: 0.12,
-            ...options
-        };
-
-        elementsToAnimate.forEach((item) => {
-            gsap.from(item.target, {
-                scrollTrigger: {
-                    trigger: triggerEl,
-                    start: defaultOptions.start,
-                    toggleActions: defaultOptions.toggleActions,
-                },
-                opacity: item.opacity !== undefined ? item.opacity : 0,
-                x: item.x || 0,
-                y: item.y || 0,
-                scale: item.scale || 1,
-                duration: item.duration || defaultOptions.duration,
-                stagger: item.stagger || defaultOptions.stagger,
-                ease: defaultOptions.ease,
-                clearProps: "opacity,transform" // Animation ke baad clean rakhne ke liye
-            });
-        });
-    }
-
-
-
-
-
-    // About Us Section Animation
-    
-    initScrollAnimation(".about-section-advanced", [
-        { target: ".about-small-image-wrapper", x: -50, opacity: 0 },
-        { target: ".about-text-content", x: 50, opacity: 0 },
-        { target: ".about-large-image-wrapper", x: 50, opacity: 0 }
-    ]);
-
-    // Showcase Section Animation
-    initScrollAnimation(".showcase-section", [
-        { target: "#imageWrapper", x: -60, opacity: 0 },
-        { target: "#contentWrapper > *", x: 60, opacity: 0, stagger: 0.12 }
-    ]);
-
-
-// service section / process section animation
-    initScrollAnimation(".service-home-container", [
-        { target: ".service-home-box", y: 40, opacity: 0, stagger: 0.15 }
-    ]);
-});
-
-
-
-
-
-
-// About us section start about page 
-
-
