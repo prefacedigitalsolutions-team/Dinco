@@ -359,7 +359,7 @@
 .about-section-advanced .section-title {
   font-size: 48px;
   font-weight: 500;
-  color: #094e6e;
+  color: #43872f;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
@@ -514,7 +514,7 @@
     display: inline-block;
     padding: 6px 14px;
     background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -526,7 +526,7 @@
 
 /* Standard Stylish Heading */
 .pro-heading {
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-size: 48px;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.15;
@@ -534,7 +534,7 @@
 }
 
 .pro-heading span {
-    color: #38bdf8; 
+    color: #43872f;
 }
 
 /* Description */
@@ -553,6 +553,1594 @@
     }
 }
  /* static section End  */
+
+
+
+
+
+/** product section start */
+
+
+
+.dinco-products-section {
+    position: relative;
+    width: 100%;
+    padding: 50px 30px 60px;
+    overflow: hidden;
+
+  background-color: #fff3f3;
+    color: #182018;
+
+  
+}
+
+
+/*heading */
+
+.dinco-products-heading {
+    position: relative;
+    z-index: 10;
+
+    max-width: 850px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+
+.dinco-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 22px;
+
+    border-radius: 50px;
+
+    background: #edf5e7;
+
+    color: #39752c;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.dinco-products-heading h2 {
+    margin: 18px 0 12px;
+
+    color: #16201b;
+
+    font-size:48px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+
+.dinco-products-heading h2 span {
+    display: block;
+
+    color: #39772d;
+}
+
+
+.dinco-heading-line {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin: 20px auto;
+}
+
+
+.dinco-heading-line span {
+    width: 55px;
+    height: 1px;
+
+    background: #6e9d5b;
+}
+
+
+.dinco-heading-line i {
+    font-style: normal;
+
+    font-size: 18px;
+}
+
+
+.dinco-products-heading p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #687069;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/*product wrapper */
+
+.dinco-products-wrapper {
+    position: relative;
+
+    width: min(1180px, 100%);
+
+    min-height: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* commom product box  */
+
+.dinco-product {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 35%;
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px 30px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid #a9c695;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(42, 75, 35, 0.06);
+
+    transition:
+        transform 0.55s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+
+
+
+/* All shape set proper */
+
+.product-01 {
+    top: 0 !important;
+    left: 0 !important;
+
+    flex-direction: row;
+
+    clip-path: none !important;
+}
+
+
+.product-03 {
+    top: 320px !important;
+    left: -70px !important;
+
+    flex-direction: row;
+
+    clip-path: polygon(
+        0 0,
+        88% 0,
+        100% 50%,
+        88% 100%,
+        0 100%
+    ) !important;
+
+     
+}
+
+.product-05 {
+    top: 640px !important;
+    left: 0 !important;
+
+    flex-direction: row;
+
+    clip-path: none !important;
+}
+
+/* RIGHT SIDE
+   Image → Text */
+
+
+
+
+/* PRODUCT 02 — SIMPLE */
+
+.product-02 {
+    top: 0 !important;
+    right: 0 !important;
+
+    flex-direction: row-reverse;
+
+    clip-path: none !important;
+}
+
+
+/* PRODUCT 04 — LEFT ARROW */
+
+.product-04 {
+    top: 320px !important;
+    right: -70px !important;
+
+    flex-direction: row-reverse;
+
+    clip-path: polygon(
+        12% 0,
+        100% 0,
+        100% 100%,
+        12% 100%,
+        0 50%
+    ) !important;
+}
+
+
+/* PRODUCT 06 — SIMPLE */
+
+.product-06 {
+    top: 640px !important;
+    right: 0 !important;
+
+    flex-direction: row-reverse;
+
+    clip-path: none !important;
+}
+
+
+/* product posation */
+
+/* TOP */
+
+.product-01 {
+    top: 0;
+    left: 0;
+}
+
+
+.product-02 {
+    top: 0;
+    right: 0;
+}
+
+
+/* MIDDLE */
+
+.product-03 {
+    top: 280px;
+    left: -40px;
+}
+
+
+.product-04 {
+    top: 280px;
+    right: -40px;
+}
+
+
+/* BOTTOM */
+
+.product-05 {
+    top: 560px;
+    left: 15px;
+}
+
+
+.product-06 {
+    top: 560px;
+    right: 15px;
+}
+
+
+/* product contend  */
+
+.product-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 48%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    flex-shrink: 0;
+}
+
+
+/* RIGHT SIDE TEXT */
+
+.product-02 .product-content,
+.product-04 .product-content,
+.product-06 .product-content {
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+
+/* number */
+
+.product-number {
+    color: #d2e2c8;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/*product info  */
+
+.product-info {
+    margin-top: 10px;
+}
+
+
+.product-info h3 {
+    margin: 0;
+
+    color: #172019;
+
+    font-size: 20px;
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+/* green line */
+
+.product-line {
+    display: block;
+
+    width: 30px;
+    height: 3px;
+
+    margin: 12px 0;
+
+    background: #4a8835;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* RIGHT SIDE LINE */
+
+.product-02 .product-line,
+.product-04 .product-line,
+.product-06 .product-line {
+    margin-left: auto;
+}
+
+
+/* description */
+
+.product-info p {
+    max-width: 220px;
+
+    margin: 0;
+
+    color: #687168;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+/* product image area  */
+
+.product-image {
+    position: relative;
+
+    z-index: 4;
+
+    width: 57%;
+    height: 200px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* machine img  */
+
+.product-image img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 245px;
+    max-height: 195px;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    pointer-events: auto;
+
+    filter:
+        drop-shadow(
+            0 13px 10px rgba(0, 0, 0, 0.13)
+        );
+
+    transition:
+        transform 0.55s cubic-bezier(.2, .8, .2, 1),
+        filter 0.55s ease;
+}
+
+
+
+/* arro  */
+
+.product-arrow {
+    position: relative;
+
+    z-index: 10;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    border-radius: 50%;
+
+    background: #43872f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 18px rgba(55, 112, 41, 0.22);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.product-arrow span {
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.product-arrow:hover {
+    background: #28691f;
+
+    transform: scale(1.08);
+}
+
+
+.product-arrow:hover span {
+    transform: translateX(3px);
+}
+
+
+/* product hover */
+
+.dinco-product:hover {
+    border-color: #8fb878;
+
+    box-shadow:
+        0 25px 55px rgba(48, 88, 38, 0.13);
+}
+
+
+.dinco-product:hover .product-line {
+    width: 48px;
+}
+
+
+.dinco-product:hover .product-image img {
+    transform:
+        scale(1.07)
+        translateY(-5px);
+
+    filter:
+        drop-shadow(
+            0 20px 18px rgba(0, 0, 0, 0.18)
+        );
+}
+
+
+/* =========================================================
+   FLOATING MACHINE ANIMATION
+========================================================= */
+
+.product-01 .product-image img,
+.product-04 .product-image img {
+    animation:
+        dincoFloatOne
+        5s
+        ease-in-out
+        infinite;
+}
+
+
+.product-02 .product-image img,
+.product-05 .product-image img {
+    animation:
+        dincoFloatTwo
+        5.5s
+        ease-in-out
+        infinite;
+}
+
+
+.product-03 .product-image img,
+.product-06 .product-image img {
+    animation:
+        dincoFloatThree
+        5.2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes dincoFloatOne {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+@keyframes dincoFloatTwo {
+
+    0%,
+    100% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+@keyframes dincoFloatThree {
+
+    0%,
+    100% {
+        transform: translateY(2px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =========================================================
+   CENTER DINCO HUB
+========================================================= */
+
+.dinco-center {
+    position: absolute;
+
+    z-index: 6;
+
+    top: 280px;
+
+    left: 50%;
+
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   CENTER RINGS
+========================================================= */
+
+.center-ring {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border:
+        1px dashed
+        rgba(75, 137, 56, 0.25);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+.ring-1 {
+    width: 275px;
+    height: 275px;
+}
+
+
+.ring-2 {
+    width: 340px;
+    height: 340px;
+}
+
+
+.ring-3 {
+    width: 410px;
+    height: 410px;
+}
+
+
+/* =========================================================
+   CENTER INNER
+========================================================= */
+
+.dinco-center-inner {
+    position: relative;
+
+    z-index: 8;
+
+    width: 210px;
+    height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e3eadf;
+
+    box-shadow:
+        0 15px 50px rgba(43, 77, 35, 0.12);
+}
+
+
+/* =========================================================
+   CENTER LOGO
+========================================================= */
+
+.dinco-logo {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5px;
+
+    border-radius: 50%;
+
+    background: #43872f;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+.dinco-center-inner h3 {
+    margin: 0;
+
+    color: #39772d;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.dinco-center-inner small {
+    margin-top: 3px;
+
+    color: #1f2a20;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.dinco-center-inner p {
+    margin: 13px 0 0;
+
+    color: #697169;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CENTER CONNECTION DOTS
+========================================================= */
+
+.dinco-center::before,
+.dinco-center::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #5a943f;
+
+    box-shadow:
+        0 0 0 5px rgba(90, 148, 63, 0.10);
+
+    z-index: 10;
+}
+
+
+.dinco-center::before {
+    top: 18px;
+    left: -2px;
+}
+
+
+.dinco-center::after {
+    top: 18px;
+    right: -2px;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.dinco-products-footer {
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+
+.dinco-explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding:
+        13px
+        20px
+        13px
+        24px;
+
+    border-radius: 50px;
+
+    background: #43872f;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(59, 123, 43, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.dinco-explore-btn strong {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    font-size: 17px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.dinco-explore-btn:hover {
+    color: #ffffff;
+
+    background: #2f6f24;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(59, 123, 43, 0.30);
+}
+
+
+.dinco-explore-btn:hover strong {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.dinco-products-tagline {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    color: #657060;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.tagline-icon {
+    width: 19px;
+    height: 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf4e4;
+
+    color: #579044;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   JAVASCRIPT SCROLL REVEAL
+========================================================= */
+
+
+/* Heading */
+
+.dinco-reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.dinco-reveal.is-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PRODUCT REVEAL
+========================================================= */
+
+.dinco-reveal-product {
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease var(--dinco-delay),
+        transform 0.8s cubic-bezier(.2, .8, .2, 1)
+        var(--dinco-delay);
+}
+
+
+/* LEFT PRODUCTS ENTER FROM LEFT */
+
+.product-01.dinco-reveal-product,
+.product-03.dinco-reveal-product,
+.product-05.dinco-reveal-product {
+    transform:
+        translateX(-70px);
+}
+
+
+/* RIGHT PRODUCTS ENTER FROM RIGHT */
+
+.product-02.dinco-reveal-product,
+.product-04.dinco-reveal-product,
+.product-06.dinco-reveal-product {
+    transform:
+        translateX(70px);
+}
+
+
+/* VISIBLE */
+
+.dinco-reveal-product.is-visible {
+    opacity: 1;
+
+    transform:
+        translateX(0);
+}
+
+
+/* =========================================================
+   CENTER REVEAL
+========================================================= */
+
+.dinco-reveal-center {
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0.75);
+
+    transition:
+        opacity 1s ease 0.35s,
+        transform 1s cubic-bezier(.2, .8, .2, 1) 0.35s;
+}
+
+
+.dinco-reveal-center.is-visible {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        scale(1);
+}
+
+
+/* =========================================================
+   RING REVEAL
+========================================================= */
+
+.dinco-center .center-ring {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.7);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.4s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.dinco-center.rings-active .center-ring {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+.dinco-center.rings-active .ring-1 {
+    transition-delay: 0.1s;
+}
+
+
+.dinco-center.rings-active .ring-2 {
+    transition-delay: 0.25s;
+}
+
+
+.dinco-center.rings-active .ring-3 {
+    transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   FOOTER REVEAL
+========================================================= */
+
+.dinco-reveal-footer {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease 0.5s,
+        transform 0.8s ease 0.5s;
+}
+
+
+.dinco-reveal-footer.is-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ARROW JS ACTIVE
+========================================================= */
+
+.product-arrow.arrow-active span {
+    transform: translateX(4px);
+}
+
+
+.dinco-explore-btn.explore-active strong {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .dinco-products-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .dinco-products-wrapper {
+        min-height: 800px;
+    }
+
+
+    .dinco-product {
+        width: 46%;
+
+        height: 230px;
+
+        padding:
+            22px
+            25px;
+    }
+
+
+    .product-03 {
+        left: 0;
+    }
+
+
+    .product-04 {
+        right: 0;
+    }
+
+
+    .product-05 {
+        left: 0;
+    }
+
+
+    .product-06 {
+        right: 0;
+    }
+
+
+    .product-info h3 {
+        font-size: 18px;
+    }
+
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+
+    .product-image img {
+        max-width: 200px;
+    }
+
+
+    .dinco-center {
+        transform:
+            translateX(-50%)
+            scale(0.9);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .dinco-products-section {
+        padding:
+            70px
+            15px
+            45px;
+    }
+
+
+    /* -----------------------------------------
+       HEADING
+    ----------------------------------------- */
+
+    .dinco-products-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .dinco-eyebrow {
+        padding: 7px 17px;
+
+        font-size: 10px;
+    }
+
+
+    .dinco-products-heading h2 {
+        margin-top: 15px;
+
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .dinco-products-heading p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       WRAPPER
+    ----------------------------------------- */
+
+    .dinco-products-wrapper {
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCT BOX
+    ----------------------------------------- */
+
+    .dinco-product {
+        position: relative;
+
+        top: auto !important;
+
+        left: auto !important;
+
+        right: auto !important;
+
+        width: 100%;
+
+        height: 205px;
+
+        min-height: 205px;
+
+        padding: 18px;
+
+        border-radius: 22px;
+
+        clip-path: none !important;
+    }
+
+
+    /* LEFT */
+
+    .product-01,
+    .product-03,
+    .product-05 {
+        flex-direction: row;
+    }
+
+
+    /* RIGHT */
+
+    .product-02,
+    .product-04,
+    .product-06 {
+        flex-direction: row-reverse;
+    }
+
+
+    /* -----------------------------------------
+       CONTENT
+    ----------------------------------------- */
+
+    .product-content {
+        width: 48%;
+    }
+
+
+    .product-02 .product-content,
+    .product-04 .product-content,
+    .product-06 .product-content {
+        align-items: flex-end;
+
+        text-align: right;
+    }
+
+
+    .product-number {
+        font-size: 30px;
+    }
+
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+
+    .product-info p {
+        max-width: 155px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       IMAGE
+    ----------------------------------------- */
+
+    .product-image {
+        width: 52%;
+
+        height: 160px;
+    }
+
+
+    .product-image img {
+        max-width: 170px;
+
+        max-height: 145px;
+    }
+
+
+    /* -----------------------------------------
+       ARROW
+    ----------------------------------------- */
+
+    .product-arrow {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    /* -----------------------------------------
+       CENTER
+    ----------------------------------------- */
+
+    .dinco-center {
+        position: relative;
+
+        top: auto;
+
+        left: auto;
+
+        width: 205px;
+
+        height: 205px;
+
+        margin:
+            20px auto;
+
+        transform: none;
+
+        order: 4;
+    }
+
+
+    .dinco-center-inner {
+        width: 170px;
+
+        height: 170px;
+    }
+
+
+    .dinco-center-inner h3 {
+        font-size: 19px;
+    }
+
+
+    .dinco-center-inner p {
+        font-size: 9px;
+    }
+
+
+    .ring-1 {
+        width: 215px;
+
+        height: 215px;
+    }
+
+
+    .ring-2 {
+        width: 255px;
+
+        height: 255px;
+    }
+
+
+    .ring-3 {
+        width: 295px;
+
+        height: 295px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE REVEAL
+    ----------------------------------------- */
+
+    .dinco-reveal-product {
+        transform:
+            translateY(35px) !important;
+    }
+
+
+    .dinco-reveal-product.is-visible {
+        transform:
+            translateY(0) !important;
+    }
+
+
+    .dinco-reveal-center {
+        transform:
+            scale(0.75);
+    }
+
+
+    .dinco-reveal-center.is-visible {
+        transform:
+            scale(1);
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .dinco-products-footer {
+        margin-top: 35px;
+    }
+
+
+    .dinco-products-tagline {
+        margin-top: 22px;
+
+        text-align: center;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .dinco-products-section {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .dinco-products-heading h2 {
+        font-size: 29px;
+    }
+
+
+    .dinco-products-heading p {
+        font-size: 13px;
+    }
+
+
+    .dinco-product {
+        height: 190px;
+
+        min-height: 190px;
+
+        padding: 16px;
+    }
+
+
+    .product-number {
+        font-size: 28px;
+    }
+
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+
+    .product-info p {
+        max-width: 140px;
+
+        font-size: 9px;
+    }
+
+
+    .product-image {
+        height: 135px;
+    }
+
+
+    .product-image img {
+        max-width: 145px;
+
+        max-height: 125px;
+    }
+
+
+    .product-arrow {
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .dinco-center {
+        width: 190px;
+
+        height: 190px;
+    }
+
+
+    .dinco-center-inner {
+        width: 155px;
+
+        height: 155px;
+    }
+
+
+    .dinco-center-inner h3 {
+        font-size: 18px;
+    }
+
+
+    .dinco-center-inner p {
+        max-width: 120px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dinco-product,
+    .product-image img,
+    .product-arrow,
+    .dinco-explore-btn,
+    .dinco-reveal,
+    .dinco-reveal-product,
+    .dinco-reveal-center,
+    .dinco-reveal-footer,
+    .center-ring {
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
 
 
 
@@ -847,10 +2435,11 @@
 }
 
 /* Background same as outer box */
+
 .blue-box .service-box-inner{
     background:#f04825;
 }
-
+ 
 .red-box .service-box-inner{
     background:#f04825;
 }
@@ -862,7 +2451,7 @@
 .orange-box .service-box-inner{
     background:#f04825;
 }
-
+ 
 .purple-box .service-box-inner{
     background:#f04825;
 }
@@ -875,9 +2464,9 @@
     position:absolute;
     top:-60%;
     left:-120%;
-    width:50px;
+    width:90px;
     height:550%;
-    background:rgba(255,255,255,.5);
+    background:rgba(255,255,255,.6);
     transform:rotate(25deg);
     filter:blur(8px);
     pointer-events:none;
@@ -898,7 +2487,9 @@
     }
 
 }
+
 /*shine effect end*/
+
 
 
 

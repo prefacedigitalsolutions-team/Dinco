@@ -121,7 +121,417 @@ document.addEventListener("DOMContentLoaded", () => {
     }, "-=0.45");
 
 
-    // REUSABLE SCROLL ANIMATION FUNCTION
+
+
+
+
+
+// product section start home page 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.querySelector(".dinco-products-section");
+
+    if (!section) return;
+
+
+   // first Element 
+
+    const heading = section.querySelector(".dinco-products-heading");
+
+    const products = section.querySelectorAll(".dinco-product");
+
+    const center = section.querySelector(".dinco-center");
+
+    const footer = section.querySelector(".dinco-products-footer");
+
+    const tagline = section.querySelector(".dinco-products-tagline");
+
+    const rings = section.querySelectorAll(".center-ring");
+
+
+    /* =====================================================
+       2. ADD REVEAL CLASSES
+    ===================================================== */
+
+    if (heading) {
+        heading.classList.add("dinco-reveal");
+    }
+
+    products.forEach((product, index) => {
+
+        product.classList.add("dinco-reveal-product");
+
+        /*
+            Each product gets a small delay
+            01 → 02 → 03 → 04 → 05 → 06
+        */
+
+        product.style.setProperty(
+            "--dinco-delay",
+            `${index * 120}ms`
+        );
+
+    });
+
+
+    if (center) {
+        center.classList.add("dinco-reveal-center");
+    }
+
+    if (footer) {
+        footer.classList.add("dinco-reveal-footer");
+    }
+
+    if (tagline) {
+        tagline.classList.add("dinco-reveal-footer");
+    }
+
+
+    /* =====================================================
+       3. SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements = section.querySelectorAll(
+        ".dinco-reveal, " +
+        ".dinco-reveal-product, " +
+        ".dinco-reveal-center, " +
+        ".dinco-reveal-footer"
+    );
+
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("is-visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -60px 0px"
+        }
+    );
+
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+
+
+    /* =====================================================
+       4. CENTER RINGS ANIMATION
+    ===================================================== */
+
+    if (center) {
+
+        const ringObserver = new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        center.classList.add("rings-active");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.4
+            }
+        );
+
+        ringObserver.observe(center);
+    }
+
+
+
+    /* =====================================================
+       5. PRODUCT 3D TILT
+    ===================================================== */
+
+    const isMobile = window.matchMedia(
+        "(max-width: 767px)"
+    ).matches;
+
+
+    if (!isMobile) {
+
+        products.forEach(product => {
+
+            product.addEventListener("mousemove", (event) => {
+
+                const rect = product.getBoundingClientRect();
+
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
+
+
+                const centerX =
+                    rect.width / 2;
+
+                const centerY =
+                    rect.height / 2;
+
+
+                const rotateY =
+                    ((x - centerX) / centerX) * 2.5;
+
+                const rotateX =
+                    ((centerY - y) / centerY) * 2.5;
+
+
+                product.style.transform = `
+                    translateY(-9px)
+                    perspective(900px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                `;
+
+            });
+
+
+            product.addEventListener("mouseleave", () => {
+
+                product.style.transform = "";
+
+            });
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       6. PRODUCT IMAGE MOUSE MOVEMENT
+    ===================================================== */
+
+    if (!isMobile) {
+
+        products.forEach(product => {
+
+            const image = product.querySelector(
+                ".product-image img"
+            );
+
+            if (!image) return;
+
+
+            product.addEventListener("mousemove", (event) => {
+
+                const rect = product.getBoundingClientRect();
+
+                const x =
+                    (event.clientX - rect.left) /
+                    rect.width;
+
+                const y =
+                    (event.clientY - rect.top) /
+                    rect.height;
+
+
+                const moveX =
+                    (x - 0.5) * 10;
+
+                const moveY =
+                    (y - 0.5) * 8;
+
+
+                image.style.marginLeft =
+                    `${moveX}px`;
+
+                image.style.marginTop =
+                    `${moveY}px`;
+
+            });
+
+
+            product.addEventListener("mouseleave", () => {
+
+                image.style.marginLeft = "";
+
+                image.style.marginTop = "";
+
+            });
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       7. PRODUCT ARROW MICRO ANIMATION
+    ===================================================== */
+
+    products.forEach(product => {
+
+        const arrow = product.querySelector(
+            ".product-arrow"
+        );
+
+        if (!arrow) return;
+
+
+        arrow.addEventListener("mouseenter", () => {
+
+            arrow.classList.add("arrow-active");
+
+        });
+
+
+        arrow.addEventListener("mouseleave", () => {
+
+            arrow.classList.remove("arrow-active");
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       8. EXPLORE BUTTON
+    ===================================================== */
+
+    const exploreButton =
+        section.querySelector(".dinco-explore-btn");
+
+
+    if (exploreButton) {
+
+        exploreButton.addEventListener("mouseenter", () => {
+
+            exploreButton.classList.add(
+                "explore-active"
+            );
+
+        });
+
+
+        exploreButton.addEventListener("mouseleave", () => {
+
+            exploreButton.classList.remove(
+                "explore-active"
+            );
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       9. PARALLAX EFFECT FOR CENTER HUB
+    ===================================================== */
+
+    if (!isMobile && center) {
+
+        section.addEventListener("mousemove", (event) => {
+
+            const rect =
+                section.getBoundingClientRect();
+
+
+            const x =
+                (event.clientX - rect.left) /
+                rect.width;
+
+
+            const y =
+                (event.clientY - rect.top) /
+                rect.height;
+
+
+            const moveX =
+                (x - 0.5) * 10;
+
+            const moveY =
+                (y - 0.5) * 8;
+
+
+            center.style.setProperty(
+                "--center-x",
+                `${moveX}px`
+            );
+
+            center.style.setProperty(
+                "--center-y",
+                `${moveY}px`
+            );
+
+        });
+
+
+        section.addEventListener("mouseleave", () => {
+
+            center.style.setProperty(
+                "--center-x",
+                "0px"
+            );
+
+            center.style.setProperty(
+                "--center-y",
+                "0px"
+            );
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       10. PREVENT IMAGE DRAGGING
+    ===================================================== */
+
+    const images =
+        section.querySelectorAll("img");
+
+
+    images.forEach(img => {
+
+        img.setAttribute(
+            "draggable",
+            "false"
+        );
+
+    });
+
+});
+
+// product section End home page
+
+
+
+
+
+
+
+
+
+    // scroll amimation section start 
+
     function initScrollAnimation(triggerEl, elementsToAnimate, options = {}) {
         const defaultOptions = {
             start: "top 75%",
@@ -152,7 +562,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+
+
+
     // About Us Section Animation
+    
     initScrollAnimation(".about-section-advanced", [
         { target: ".about-small-image-wrapper", x: -50, opacity: 0 },
         { target: ".about-text-content", x: 50, opacity: 0 },
@@ -171,3 +585,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { target: ".service-home-box", y: 40, opacity: 0, stagger: 0.15 }
     ]);
 });
+
+
+
+
+
+
+// About us section start about page 
+
+
