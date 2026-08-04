@@ -1,3 +1,61 @@
+// nab bar section start 
+
+
+  // Navbar Scroll Effect
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("proNavbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  // Mobile Menu Toggle
+  const mobileMenu = document.getElementById("proMobileMenu");
+  const navLinks = document.getElementById("proNavLinks");
+
+  mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Mobile Dropdown Click Support
+  const dropdownParent = document.querySelector(".pro-dropdown > a");
+  dropdownParent.addEventListener("click", (e) => {
+    if (window.innerWidth <= 968) {
+      e.preventDefault();
+      dropdownParent.parentElement.classList.toggle("active");
+    }
+  });
+
+
+
+// bottom to top button start
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fabContainer = document.getElementById("fabContainer");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // GSAP ScrollTrigger setup (Yeh waise hi kaam karega)
+    ScrollTrigger.create({
+        start: "top -300px",
+        onEnter: () => fabContainer.classList.add("show"),
+        onLeaveBack: () => fabContainer.classList.remove("show")
+    });
+
+    // Native Smooth Scroll (Bina kisi extra plugin ke)
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+// bottom to top button End
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     //  GSAP REGISTER PLUGIN
@@ -171,7 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { target: ".service-home-box", y: 40, opacity: 0, stagger: 0.15 }
     ]);
 });
-
 
 
 
@@ -569,5 +626,103 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     });
+
+});
+
+
+
+
+// swervice section start 
+
+
+const serviceData=[
+
+{
+title:"Dinco",
+image:"img/img-home-01.jpg",
+desc:"We analyze your ideas, understand your business goals and prepare a detailed strategy before development begins. This helps create a strong foundation for the entire project."
+},
+
+{
+title:"DESIGN DEVELOPMENT",
+image:"img/img-home-01.jpg",
+desc:"Our designers create modern UI/UX designs that are attractive, responsive and focused on user experience across all devices."
+},
+
+{
+title:"DELIVERY & SUPPORT",
+image:"img/about-img-02.jpg",
+desc:"After project completion we provide deployment, maintenance, technical support and continuous improvements."
+},
+
+{
+title:"LAUNCH & DEPLOY",
+image:"img/about-img-02.jpg",
+desc:"We deploy your website securely on the server with performance optimization, SEO setup and complete testing."
+},
+
+{
+title:"TESTING & QA",
+image:"img/image-home-1.jpg",
+desc:"Every project passes through multiple testing stages to ensure speed, security, responsiveness and bug-free performance."
+},
+
+{
+title:"FEEDBACK & REVISIONS",
+image:"img/img-home-01.jpg",
+desc:"Client feedback is important. We improve the final product through revisions until everything meets expectations."
+}
+
+];
+
+const modal=document.getElementById("serviceModal");
+
+const modalTitle=document.getElementById("modalTitle");
+
+const modalDesc=document.getElementById("modalDesc");
+
+const modalImage=document.getElementById("modalImage");
+
+document.querySelectorAll(".hover-read-more").forEach((btn,index)=>{
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+modal.classList.add("active");
+
+modalTitle.innerHTML=serviceData[index].title;
+
+modalDesc.innerHTML=serviceData[index].desc;
+
+modalImage.src=serviceData[index].image;
+
+});
+
+});
+
+document.querySelector(".close-modal").onclick=()=>{
+
+modal.classList.remove("active");
+
+};
+
+modal.onclick=(e)=>{
+
+if(e.target===modal){
+
+modal.classList.remove("active");
+
+}
+
+};
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="Escape"){
+
+modal.classList.remove("active");
+
+}
 
 });

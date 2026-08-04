@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dtr</title>
+
+  <!-- font-->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- 1. Sirf Ek Latest Font Awesome CDN (Conflicts hatane ke liye) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,31 +19,49 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
   <!-- Custom CSS File -->
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
 
   <!-- nav bar start  -->
 
-<nav class="navbar">
-  <a href="#" class="logo">
-    <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
-    Nicals <span class="logo-highlight">UI</span>
+<nav class="pro-navbar" id="proNavbar">
+  <!-- Logo -->
+  <a href="#" class="pro-logo">
+    <img src="../img/logo.png" alt="Logo" class="pro-logo-img">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+
+  <!-- Mobile Menu Toggle Button -->
+  <div class="pro-menu-toggle" id="proMobileMenu">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Links -->
+  <ul class="pro-nav-links" id="proNavLinks">
+    <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
     <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About us</a></li>
    
-    <li class="dropdown">
-      <a href="#">Portfolio <i class="fa-solid fa-chevron-down chevron-icon"></i></a>
-      <ul class="dropdown-menu">
-        <li><a href="#"><i class="fa-solid fa-code"></i> Web Design</a></li>
-        <li><a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i> Animations</a></li>
-        <li><a href="#"><i class="fa-solid fa-bullhorn"></i> Branding</a></li>
-      </ul>
+    <!-- Dropdown Wrapper -->
+   <li class="pro-dropdown">
+  <a href="#">Products <i class="fa-solid fa-chevron-down pro-chevron-icon"></i></a>
+  <div class="pro-dropdown-menu">
+    <ul class="pro-dropdown-menu-inner">
+      <li><a href="high-quality.html"><i class="fa-solid fa-display"></i> High Quality Screen</a></li>
+      <li><a href="wire-netting.html"><i class="fa-solid fa-border-all"></i> Wire Netting</a></li>
+      <li><a href="#"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
+      <li><a href="#"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
+      <li><a href="#"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+    </ul>
+  </div>
+</li>
+
+    <li><a href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a></li>
+    
+    <!-- Phone Number -->
+    <li class="pro-nav-phone">
+      <a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i> +91 98765 43210</a>
     </li>
-    <li><a href="#"><i class="fa-solid fa-headset"></i> Contact</a></li>
   </ul>
 </nav>
 
@@ -54,7 +75,7 @@
 <!-- banar section start -->
 
 <section class="about-hero">
-    <img src="img/image-home-1.jpg" alt="About Banner">
+    <img src="../img/image-home-1.jpg" alt="About Banner">
 
     <div class="overlay"></div>
 
@@ -189,7 +210,7 @@
             <div class="dinco-premium-image">
 
                 <img
-                    src="img/img-home-01.jpg"
+                    src="../img/img-home-01.jpg"
                     alt="DINCO Industries"
                 >
 
@@ -381,5 +402,23 @@
 
 
 
+<!-- boottom to top section start-->
+
+<div class="fab-container" id="fabContainer">
+    <!-- Professional WhatsApp Button -->
+    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello,%20I%20want%20to%20connect%20with%20you!" target="_blank" class="fab-btn fab-whatsapp" aria-label="Chat on WhatsApp">
+        <span class="fab-text">Let's Chat</span>
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="fab-btn fab-up" id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+
+<!-- boottom to top section End -->
+
+<script src="../js/index.js"></script>
 </body>
 </html>

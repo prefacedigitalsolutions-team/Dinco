@@ -44,14 +44,14 @@ color:#fff;
 display:inline-block;
 font-size:15px;
 letter-spacing:3px;
-color:#d4af37;
+color:#f04825;
 margin-bottom:15px;
 opacity:0;
 animation:fadeUp .8s forwards;
 }
 
 .hero-content h1{
-font-size:65px;
+font-size:45px;
 font-weight:700;
 line-height:1.15;
 margin-bottom:25px;
@@ -60,7 +60,7 @@ animation:fadeUp 1s .3s forwards;
 }
 
 .hero-content p{
-font-size:18px;
+font-size:17px;
 line-height:1.8;
 color:#ddd;
 max-width:550px;
@@ -237,7 +237,7 @@ font-size:16px;
 
     margin-bottom: 20px;
 
-    color: #4a8937;
+    color: #f04825;
 
     font-size: 11px;
 
@@ -254,7 +254,7 @@ font-size:16px;
 
     display: block;
 
-    background: #4a8937;
+    background: #f04825;
 }
 
 
@@ -278,7 +278,7 @@ font-size:16px;
 .dinco-premium-content h2 strong {
     display: block;
 
-    color: #4a8937;
+    color: #f04825;
 
     font-weight: 700;
 }
@@ -334,7 +334,7 @@ font-size:16px;
 
     border-radius: 50%;
 
-    color: #4a8937;
+    color: #f04825;
 
     font-size: 10px;
 
@@ -535,7 +535,7 @@ font-size:16px;
 
     border-radius: 50%;
 
-    background: #43872f;
+    background: #f04825;
 
     color: #ffffff;
 
@@ -600,8 +600,7 @@ font-size:16px;
 
 
 .dinco-premium-mission-mark {
-    color: #78a86a;
-
+    color: #f04825;
     font-family: Georgia, serif;
 
     font-size: 40px;
@@ -628,7 +627,7 @@ font-size:16px;
 
     border-top: 1px solid #e0e8dc;
 
-    color: #4a8937;
+    color: #f04825;
 
     font-size: 10px;
 
@@ -685,7 +684,7 @@ font-size:16px;
 
     margin-bottom: 6px;
 
-    color: #3f7f31;
+    color: #f04825;
 
     font-size: 13px;
 

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dtr</title>
+
+  <!-- font-->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 1. Sirf Ek Latest Font Awesome CDN (Conflicts hatane ke liye) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- 2. Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 3. GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+
+  <!-- nav bar start  -->
+
+<nav class="pro-navbar" id="proNavbar">
+  <!-- Logo -->
+  <a href="#" class="pro-logo">
+    <img src="../img/logo.png" alt="Logo" class="pro-logo-img">
+  </a>
+
+  <!-- Mobile Menu Toggle Button -->
+  <div class="pro-menu-toggle" id="proMobileMenu">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Links -->
+  <ul class="pro-nav-links" id="proNavLinks">
+    <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About us</a></li>
+   
+    <!-- Dropdown Wrapper -->
+   <li class="pro-dropdown">
+  <a href="#">Products <i class="fa-solid fa-chevron-down pro-chevron-icon"></i></a>
+  <div class="pro-dropdown-menu">
+    <ul class="pro-dropdown-menu-inner">
+      <li><a href="high-quality.html"><i class="fa-solid fa-display"></i> High Quality Screen</a></li>
+      <li><a href="wire-netting.html"><i class="fa-solid fa-border-all"></i> Wire Netting</a></li>
+      <li><a href="#"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
+      <li><a href="#"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
+      <li><a href="#"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+    </ul>
+  </div>
+</li>
+
+    <li><a href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a></li>
+    
+    <!-- Phone Number -->
+    <li class="pro-nav-phone">
+      <a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i> +91 98765 43210</a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- nav bar End  -->
+
+
+
+
+
+
+<!-- banar section start -->
+
+
+<section class="enterprise-screen-banner">
+  <div class="enterprise-container">
+    
+    <!-- Left Column: Branding, Title & Quick Technical Specs -->
+    <div class="enterprise-content">
+      <div class="enterprise-meta-top">
+        <span class="iso-badge">ISO Certified Manufacturer</span>
+        <span class="stock-status"><span class="live-dot"></span> Ready Stock & Custom Made</span>
+      </div>
+
+      <h1 class="enterprise-main-title">
+        High Quality <span>Perforated Screens</span>
+      </h1>
+
+      <p class="enterprise-lead">
+        Engineered for extreme precision in industrial processing, separation, and architectural infrastructure. Sourced from world-class manufacturing partners.
+      </p>
+
+      <!-- Technical Highlight Grid -->
+      <div class="tech-specs-box">
+        <div class="spec-col">
+          <span class="spec-label">Materials</span>
+          <span class="spec-val">SS & Mild Steel (Up to 5mm)</span>
+        </div>
+        <div class="spec-col">
+          <span class="spec-label">Key Patterns</span>
+          <span class="spec-val">Bridge Hole, Trieur, Perfocon</span>
+        </div>
+        <div class="spec-col">
+          <span class="spec-label">Applications</span>
+          <span class="spec-val">Agriculture, Food & Acoustics</span>
+        </div>
+      </div>
+
+      <!-- Action Control Buttons -->
+      <div class="enterprise-cta-group">
+        <a href="#quotation" class="btn-enterprise-solid">Request Bulk Quotation</a>
+        <a href="#catalog" class="btn-enterprise-ghost">Download Technical Catalog</a>
+      </div>
+    </div>
+
+    <!-- Right Column: Professional Industrial Showcase Visual -->
+    <div class="enterprise-visual-wrapper">
+      <div class="industrial-steel-frame">
+        <div class="corner-marker top-left"></div>
+        <div class="corner-marker top-right"></div>
+        <div class="corner-marker bottom-left"></div>
+        <div class="corner-marker bottom-right"></div>
+        
+        <!-- Aap yahan apni original high-res screen ki image lagayein -->
+        <img src="../img/high-quality/Hight-quality-screen.jpg" alt="High Quality Perforated Screens Industrial View" class="enterprise-product-img">
+        
+        <!-- Floating Precision Overlay Card -->
+        <div class="precision-overlay-card">
+          <div class="precision-icon">⚙️</div>
+          <div class="precision-text">
+            <h4>Custom Tooling Available</h4>
+            <p>Tailored aperture sizes for specific requirements</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- banar section End-->
+
+
+
+
+
+
+<!-- paragraph section start -->
+
+<section class="machine-overview-section">
+  <div class="container">
+    <div class="layout-row">
+      
+      <!-- Left Content -->
+      <div class="col text-col">
+        <div class="content-block">
+          <h3>01 / OVERVIEW</h3>
+          <p>Elevate your sugarcane processing with our comprehensive, end-to-end solution. Designed for maximum efficiency and pristine cleanliness, our advanced grading and separation systems use precision engineering to minimize waste and significantly boost your total output.</p>
+        </div>
+        <div class="content-block">
+          <h3>02 / APPLICATIONS</h3>
+          <p>Ruggedly built for demanding heavy-duty industrial environments, our advanced purification system thoroughly detects and eliminates unwanted impurities, stones, and heavy metals from bagasse, strictly guaranteeing a flawless, safe, and premium-grade final product that meets the highest standards of quality.</p>
+        </div>
+      </div>
+
+      <!-- Center Image (Square Design) -->
+      <div class="col image-col">
+        <div class="image-wrapper">
+          <img src="../img/high-quality/center-img.jpeg" alt="Industrial Machine Showcase">
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col text-col">
+        <div class="content-block">
+          <h3>03 / SUSTAINABILITY</h3>
+          <p>Built to support a sustainable future with a remarkably low carbon footprint and smart resource optimization, our state-of-the-art machines deliver exceptional energy efficiency while drastically cutting down operational waste.</p>
+        </div>
+        <div class="content-block">
+          <h3>04 / SUPPORT</h3>
+          <p>We are committed to keeping your operations running seamlessly around the clock by providing comprehensive customer support, proactive maintenance services, and robust, reliable warranty options you can always depend on.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- paragraph section End  -->
+
+
+
+
+
+
+<!-- product section start -->
+
+
+<!-- HTML Structure Start -->
+<section class="featured-product-gallery-section">
+  <div class="fpg-container">
+    
+    <div class="fpg-header">
+      <h2>FEATURED PRODUCT GALLERY</h2>
+    </div>
+
+    <div class="fpg-main-wrapper">
+      
+      <!-- Left Side: 9 Images Grid -->
+      <div class="fpg-grid-area">
+        <h3 class="fpg-sub-title">Our Featured Products</h3>
+        <div class="fpg-grid">
+          
+          <!-- Repeatable Product Card (1 to 9) -->
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-1.jpeg" alt="Bagasse Cleaner">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Bagasse Cleaner Pro</h4>
+              <p>High-performance cleaning system for impurity removal.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-2.jpg" alt="Vibrating Sieve">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Vibrating Sieve</h4>
+              <p>Accurate material separation and precise grading.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-3.jpg" alt="Vibrating D-1">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Vibrating D-1</h4>
+              <p>Durable screening for heavy-duty industrial tasks.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-4.jpg" alt="Destoner">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Destoner System</h4>
+              <p>Removes stones and heavy particles safely.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-5.jpg" alt="Bagasse Cleaner">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Bagasse Cleaner Pro</h4>
+              <p>High-performance cleaning system for impurity removal.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-6.jpg" alt="Vibrating Sieve">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Vibrating Sieve</h4>
+              <p>Accurate material separation and precise grading.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-7.jpg" alt="Vibrating D-1">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Vibrating D-1</h4>
+              <p>Durable screening for heavy-duty industrial tasks.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-8.jpg" alt="Destoner">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Destoner System</h4>
+              <p>Removes stones and heavy particles safely.</p>
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img src="../img/high-quality/product-1.jpeg" alt="Bagasse Cleaner">
+            </div>
+            <div class="fpg-card-info">
+              <h4>Bagasse Cleaner Pro</h4>
+              <p>High-performance cleaning system for impurity removal.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Side: 10th Featured Product Highlight -->
+      <div class="fpg-highlight-area">
+        <h3 class="fpg-sub-title">FEATURED PRODUCT HIGHLIGHT</h3>
+        <div class="fpg-featured-card">
+          <div class="fpg-img-box fpg-featured-img">
+            <img src="../img/high-quality/product-big-1.jpg" alt="Featured Product">
+          </div>
+          <div class="fpg-featured-content">
+            <h4>PRODUCT TITLE: BAGASSE CLEANER PRO 900</h4>
+            <p>These are specially shaped holes that allow easy exit of particles through the screen, even with small holes in thick material. These screens give a perfect result in the milling process. These can be produced with a thickness many times the hole diameter. It enables control of airflow and sieving. The design and angle of perforation is developed to reduce the possible filling/clogging of the holes.<br><br>
+
+                Perfocon’s are suited for separation processes. However, they have a wide range of other applications from cheese boxes to distributor plates in fluid bed dryers and hammer mill cylinders. Hole sizes are available in stainless steel from 0.15 mm to 1.0 mm and in mild steel from 0.15 mm to 3.0 mm.
+
+
+                <br><br>
+                These are special perforation which gives a nose-type shape. These are specially needed in the agricultural industry for grain sorting and drying, through special applications to parts for agricultural machinery. Apart from agricultural industry, these are also used in Food and Processing industry for various processes.
+            
+            </p>
+            <a href="#" class="fpg-cta-btn">REQUEST QUOTE / VIEW SPECS</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- HTML Structure End -->
+
+
+<!-- CSS Styling Start -->
+<style>
+  .featured-product-gallery-section {
+    background-color: #fbfbf7;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    box-sizing: border-box;
+  }
+
+  .featured-product-gallery-section * {
+    box-sizing: border-box;
+  }
+
+  .featured-product-gallery-section .fpg-container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  /* Main Header */
+  .featured-product-gallery-section .fpg-header h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+  }
+
+  .featured-product-gallery-section .fpg-sub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Layout Grid Structure (Left 9-grid, Right Featured) */
+  .featured-product-gallery-section .fpg-main-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .featured-product-gallery-section .fpg-grid-area {
+    flex: 1.3;
+  }
+
+  .featured-product-gallery-section .fpg-highlight-area {
+    flex: 1;
+  }
+
+  /* 9-Image Sub-Grid Styling */
+  .featured-product-gallery-section .fpg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .featured-product-gallery-section .fpg-card {
+    background: #ffffff;
+    border: 1px solid #e2e8df;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  }
+
+  /* Image Box & Red Curtain Hover Effect */
+  .featured-product-gallery-section .fpg-img-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f4f6f3;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-product-gallery-section .fpg-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  /* Left-Right Red Curtain Overlay Effect on Hover */
+  .featured-product-gallery-section .fpg-img-box::before,
+  .featured-product-gallery-section .fpg-img-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(220, 20, 60, 0.35); /* Halka red transparent parda effect */
+    transition: width 0.35s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .featured-product-gallery-section .fpg-img-box::before {
+    left: 0;
+  }
+
+  .featured-product-gallery-section .fpg-img-box::after {
+    right: 0;
+  }
+
+  /* Hover trigger for curtain opening from center or expanding from sides */
+  .featured-product-gallery-section .fpg-img-box:hover::before,
+  .featured-product-gallery-section .fpg-img-box:hover::after {
+    width: 50%; /* Dono taraf se aakar image ko cover kar lega */
+  }
+
+  .featured-product-gallery-section .fpg-img-box:hover img {
+    transform: scale(1.05);
+  }
+
+
+  /* Card Text Styling */
+  .featured-product-gallery-section .fpg-card-info h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 10px 0 4px 0;
+    color: #222;
+  }
+
+  .featured-product-gallery-section .fpg-card-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Featured Product (10th Item) Styling */
+  .featured-product-gallery-section .fpg-featured-card {
+    background: #ffffff;
+    border: 1px solid #e2e8df;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  }
+
+  .featured-product-gallery-section .fpg-featured-img {
+    aspect-ratio: 16 / 11;
+    margin-bottom: 20px;
+  }
+
+  .featured-product-gallery-section .fpg-featured-content h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  .featured-product-gallery-section .fpg-featured-content p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .featured-product-gallery-section .fpg-cta-btn {
+    display: inline-block;
+    background-color: #31583d;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+  }
+
+  .featured-product-gallery-section .fpg-cta-btn:hover {
+    background-color: #24422e;
+  }
+
+  /* Responsive Design for Tablets and Mobiles */
+  @media (max-width: 1024px) {
+    .featured-product-gallery-section .fpg-main-wrapper {
+      flex-direction: column;
+    }
+    .featured-product-gallery-section .fpg-highlight-area {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured-product-gallery-section .fpg-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .featured-product-gallery-section .fpg-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<!-- CSS Styling End -->
+
+
+
+<!-- static  section start -->
+
+<section class="pro-fixed-section">
+    <div class="pro-fixed-overlay"></div>
+    <div class="pro-fixed-container">
+        <div class="pro-fixed-content">
+            <span class="pro-badge">ENGINEERING EXCELLENCE</span>
+            <h2 class="pro-heading">
+                Crafting Precision <br>
+                <span>Through Innovation</span>
+            </h2>
+            <p class="pro-description">
+                At Dinco Industries, we combine decades of craftsmanship with state-of-the-art technology to deliver unmatched industrial wire mesh and perforated screen solutions globally.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- static section End  -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer section start -->
+
+
+<footer class="footer-section">
+    <div class="footer-container">
+        
+        <!-- Column 1: Company Info & About -->
+        <div class="footer-col footer-about">
+            <h3 class="footer-logo">Dinco Overseas</h3>
+            <p class="footer-desc">
+                Delivering excellence through innovative strategies, top-notch design, and dedicated support for your global business growth.
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Portfolio</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Our Services</h4>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Conceptualization</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Design Development</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Launch & Deploy</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Testing & QA</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Support & Maintenance</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col footer-contact">
+            <h4 class="footer-heading">Get in Touch</h4>
+            <p>
+                <i class="fa-solid fa-location-dot"></i> 
+                Dinco House, Circular Rd, opp. Hero Honda Showroom, Khasapura, Rewari, Haryana 123401
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i> 
+                +91 XXXXX XXXXX
+            </p>
+            <p>
+                <i class="fa-solid fa-envelope"></i> 
+                info@dincooverseas.com
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-container">
+            <p>&copy; 2026 Dinco Overseas. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- boottom to top section start-->
+
+<div class="fab-container" id="fabContainer">
+    <!-- Professional WhatsApp Button -->
+    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello,%20I%20want%20to%20connect%20with%20you!" target="_blank" class="fab-btn fab-whatsapp" aria-label="Chat on WhatsApp">
+        <span class="fab-text">Let's Chat</span>
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="fab-btn fab-up" id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+
+<!-- boottom to top section End -->
+
+<script src="../js/index.js"></script>
+<script src="../js/product.js"></script>
+</body>
+</html>
