@@ -53,11 +53,27 @@
   border-bottom: 1px solid rgba(56, 189, 248, 0.2);
 }
 
+.pro-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
 .pro-logo .pro-logo-img {
-  height: 35px;
+  height: 40px;
   width: auto;
   display: block;
 }
+
+.pro-logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e7e7e7;
+  white-space: nowrap;
+}
+
+
 
 .pro-navbar .pro-nav-links {
   list-style: none;
@@ -105,7 +121,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  padding-top: 15px; /* Mouse gap fix karne ke liye */
+  padding-top: 15px; 
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
