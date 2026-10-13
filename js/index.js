@@ -56,10 +56,103 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+// testomonial section start
+
+(function () {
+  document.querySelectorAll('.dinco-testimonials').forEach(function(section) {
+    if (section.dataset.dtReady) return;
+    section.dataset.dtReady = 'true';
+
+    const track = section.querySelector('.dt-track');
+    const cards = Array.from(section.querySelectorAll('.dt-card'));
+    const prev = section.querySelector('.dt-prev');
+    const next = section.querySelector('.dt-next');
+    const current = section.querySelector('.dt-current');
+    const total = section.querySelector('.dt-total');
+    const progress = section.querySelector('.dt-line i');
+
+    let index = 0;
+    let timer;
+
+    function perView() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+
+    function update() {
+      const visible = perView();
+      const max = Math.max(0, cards.length - visible);
+      index = Math.min(index, max);
+
+      const step = cards[0].getBoundingClientRect().width +
+        parseFloat(getComputedStyle(cards[0]).marginRight || 0);
+
+      track.style.transform =
+        'translateX(-' + (index * step) + 'px)';
+
+      current.textContent = String(index + 1).padStart(2, '0');
+      total.textContent = String(max + 1).padStart(2, '0');
+      progress.style.width = ((index + 1) / (max + 1) * 100) + '%';
+
+      prev.disabled = index === 0;
+      next.disabled = index >= max;
+      prev.style.opacity = index === 0 ? '.45' : '1';
+      next.style.opacity = index >= max ? '.45' : '1';
+    }
+
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(function() {
+        const max = Math.max(0, cards.length - perView());
+        index = index >= max ? 0 : index + 1;
+        update();
+      }, 6000);
+    }
+
+    prev.addEventListener('click', function() {
+      index = Math.max(0, index - 1);
+      update();
+      restart();
+    });
+
+    next.addEventListener('click', function() {
+      const max = Math.max(0, cards.length - perView());
+      index = Math.min(max, index + 1);
+      update();
+      restart();
+    });
+
+    window.addEventListener('resize', update);
+    section.addEventListener('mouseenter', function() {
+      clearInterval(timer);
+    });
+    section.addEventListener('mouseleave', restart);
+
+    update();
+    restart();
+  });
+})();
+
+
+// testomonial section End
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    //  GSAP REGISTER PLUGIN
-    gsap.registerPlugin(ScrollTrigger);
+    // GSAP REGISTER PLUGIN
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
 
     // BANNER IMAGE section 
     const webDesigningImages = [
@@ -105,6 +198,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         isAnimating = true;
         const strips = document.querySelectorAll(".web-designing-strip");
+        if (!strips.length) return;
+        
         const nextImg = webDesigningImages[targetIdx];
 
         thumbs.forEach(item => item.classList.remove("active"));
@@ -135,52 +230,65 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    thumbs.forEach(item => {
-        item.addEventListener("mouseenter", () => {
-            const idx = Number(item.dataset.index);
-            triggerCurtain(idx);
+    if (thumbs.length) {
+        thumbs.forEach(item => {
+            item.addEventListener("mouseenter", () => {
+                const idx = Number(item.dataset.index);
+                triggerCurtain(idx);
+            });
         });
-    });
+    }
 
     initStrips();
     window.addEventListener("resize", initStrips);
     // banner section End
 
 
-    // HERO INTRO ANIMATION
-    const tl = gsap.timeline({ delay: 0.2 });
+    // HERO INTRO ANIMATION (Yeh tabhi chalega jab elements exist karenge)
+    if (document.querySelector(".web-designing-hero") || viewport) {
+        const tl = gsap.timeline({ delay: 0.2 });
 
-    tl.from(".web-designing-hero", {
-        opacity: 0,
-        duration: 0.4
-    })
-    .from("#webDesigningViewport", {
-        opacity: 0,
-        scale: 1.08,
-        y: 60,
-        duration: 1.2,
-        ease: "power3.out"
-    }, "-=0.2")
-    .from(".web-designing-text span", {
-        y: 140,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.15,
-        ease: "power4.out"
-    }, "-=0.9")
-    .from(".web-designing-image-wrapper", {
-        opacity: 0,
-        y: 20,
-        scale: 0.95,
-        duration: 0.45,
-        stagger: 0.12,
-        ease: "power2.out",
-        clearProps: "opacity,transform"
-    }, "-=0.45");
+        if (document.querySelector(".web-designing-hero")) {
+            tl.from(".web-designing-hero", { opacity: 0, duration: 0.4 });
+        }
+        if (viewport) {
+            tl.from("#webDesigningViewport", {
+                opacity: 0,
+                scale: 1.08,
+                y: 60,
+                duration: 1.2,
+                ease: "power3.out"
+            }, "-=0.2");
+        }
+        if (document.querySelector(".web-designing-text span")) {
+            tl.from(".web-designing-text span", {
+                y: 140,
+                opacity: 0,
+                duration: 0.9,
+                stagger: 0.15,
+                ease: "power4.out"
+            }, "-=0.9");
+        }
+        if (thumbs.length) {
+            tl.from(".web-designing-image-wrapper", {
+                opacity: 0,
+                y: 20,
+                scale: 0.95,
+                duration: 0.45,
+                stagger: 0.12,
+                ease: "power2.out",
+                clearProps: "opacity,transform"
+            }, "-=0.45");
+        }
+    }
 
 
-    // REUSABLE SCROLL ANIMATION FUNCTION
-    function initScrollAnimation(triggerEl, elementsToAnimate, options = {}) {
+    // REUSABLE SAFE SCROLL ANIMATION FUNCTION
+    function initScrollAnimation(triggerSelector, elementsToAnimate, options = {}) {
+        const triggerEl = document.querySelector(triggerSelector);
+        // Agar trigger element page par nahi hai, toh function yahin ruk jayega (No warnings)
+        if (!triggerEl) return; 
+
         const defaultOptions = {
             start: "top 75%",
             toggleActions: "play none none reverse",
@@ -191,7 +299,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         elementsToAnimate.forEach((item) => {
-            gsap.from(item.target, {
+            // Check karein ki target elements DOM mein exist karte hain ya nahi
+            const targets = document.querySelectorAll(item.target);
+            if (!targets.length) return;
+
+            gsap.from(targets, {
                 scrollTrigger: {
                     trigger: triggerEl,
                     start: defaultOptions.start,
@@ -204,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: item.duration || defaultOptions.duration,
                 stagger: item.stagger || defaultOptions.stagger,
                 ease: defaultOptions.ease,
-                clearProps: "opacity,transform" // Animation ke baad clean rakhne ke liye
+                clearProps: "opacity,transform"
             });
         });
     }
@@ -217,14 +329,13 @@ document.addEventListener("DOMContentLoaded", () => {
         { target: ".about-large-image-wrapper", x: 50, opacity: 0 }
     ]);
 
-    // Showcase Section Animation
+    // Showcase Section Animation (Ab agar ye section nahi hoga toh warning nahi aayegi)
     initScrollAnimation(".showcase-section", [
         { target: "#imageWrapper", x: -60, opacity: 0 },
         { target: "#contentWrapper > *", x: 60, opacity: 0, stagger: 0.12 }
     ]);
 
-
-// service section / process section animation
+    // Service section / process section animation
     initScrollAnimation(".service-home-container", [
         { target: ".service-home-box", y: 40, opacity: 0, stagger: 0.15 }
     ]);

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dtr</title>
+
+  <!-- font-->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 1. Sirf Ek Latest Font Awesome CDN (Conflicts hatane ke liye) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- 2. Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 3. GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+
+  <!-- nav bar start  -->
+
+<nav class="pro-navbar" id="proNavbar">
+  <!-- Logo -->
+  <a href="index.html" class="pro-logo">
+  <img src="../img/logo.png" alt="Dinco Industries Logo" class="pro-logo-img">
+  <span class="pro-logo-text">Dinco Industries</span>
+</a>
+
+  <!-- Mobile Menu Toggle Button -->
+  <div class="pro-menu-toggle" id="proMobileMenu">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Links -->
+  <ul class="pro-nav-links" id="proNavLinks">
+    <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-address-card"></i> About us</a></li>
+   
+    <!-- Dropdown Wrapper -->
+   <li class="pro-dropdown">
+  <a href="#">Products <i class="fa-solid fa-chevron-down pro-chevron-icon"></i></a>
+  <div class="pro-dropdown-menu">
+    <ul class="pro-dropdown-menu-inner">
+      <li><a href="high-quality.html"><i class="fa-solid fa-display"></i> High Quality Screen</a></li>
+      <li><a href="wire-netting.html"><i class="fa-solid fa-border-all"></i> Wire Netting</a></li>
+      <li><a href="fluid-dryer.html"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
+      <li><a href="nut-shell.html"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
+      <li><a href="perforated.html"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+      <li><a href="sugar-mill.html"> <i class="fa-solid fa-gears"></i> Sugar Mill Screens</a></li>
+    </ul>
+  </div>
+</li>
+
+    <li><a href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a></li>
+    
+    <!-- Phone Number -->
+    <li class="pro-nav-phone">
+      <a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i> +91 98765 43210</a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- nav bar End  -->
+
+
+
+
+
+
+<!-- banar section start -->
+
+
+<section class="enterprise-screen-banner fluid-dryer-banner">
+  <div class="enterprise-container">
+
+    <!-- Left Column: Branding, Title & Technical Specs -->
+    <div class="enterprise-content">
+
+      <div class="enterprise-meta-top">
+        <span class="iso-badge">Industrial Screening Solutions</span>
+        <span class="stock-status">
+          <span class="live-dot"></span>
+          Custom Specifications Available
+        </span>
+      </div>
+
+      <h1 class="enterprise-main-title">
+        High Performance <span>Fluid Dryer Screens</span>
+      </h1>
+
+      <p class="enterprise-lead">
+        Engineered for efficient fluid bed drying, uniform air distribution,
+        and reliable material processing. Dinco Industries offers industrial
+        screening solutions designed to support consistent drying performance
+        across demanding processing applications.
+      </p>
+
+      <!-- Technical Highlight Grid -->
+      <div class="tech-specs-box">
+
+        <div class="spec-col">
+          <span class="spec-label">Construction</span>
+          <span class="spec-val">
+            Stainless Steel & Industrial Grade Materials
+          </span>
+        </div>
+
+        <div class="spec-col">
+          <span class="spec-label">Key Features</span>
+          <span class="spec-val">
+            Uniform Airflow, Efficient Drying & Screening
+          </span>
+        </div>
+
+        <div class="spec-col">
+          <span class="spec-label">Applications</span>
+          <span class="spec-val">
+            Pharmaceutical, Chemical & Food Processing
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Action Control Buttons -->
+      <div class="enterprise-cta-group">
+        <a href="#quotation" class="btn-enterprise-solid">
+          Request Bulk Quotation
+        </a>
+
+        <a href="#catalog" class="btn-enterprise-ghost">
+          Explore Technical Details
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Fluid Dryer Screen Product Image -->
+    <div class="enterprise-visual-wrapper">
+      <div class="industrial-steel-frame">
+
+        <div class="corner-marker top-left"></div>
+        <div class="corner-marker top-right"></div>
+        <div class="corner-marker bottom-left"></div>
+        <div class="corner-marker bottom-right"></div>
+
+        <!-- Replace with your actual Fluid Dryer Screen image -->
+        <img
+          src="../img/fluid-dryer/fruid-dryer-banar.jpg"
+          alt="Industrial Fluid Dryer Screens by Dinco Industries"
+          class="enterprise-product-img"
+          loading="lazy"
+        >
+
+        <!-- Floating Product Information Card -->
+        <div class="precision-overlay-card">
+          <div class="precision-icon">⚙️</div>
+
+          <div class="precision-text">
+            <h4>Precision Engineered Screens</h4>
+            <p>
+              Designed for efficient airflow and dependable
+              fluid bed drying applications.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- banar section End-->
+
+
+
+
+
+
+<!-- paragraph section start -->
+
+<section class="machine-overview-section fluid-dryer-overview">
+  <div class="container">
+    <div class="layout-row">
+
+      <!-- Left Content -->
+      <div class="col text-col">
+
+        <div class="content-block">
+          <h3>01 / OVERVIEW</h3>
+          <p>
+            Dinco Industries Fluid Dryer Screens are designed for
+            fluid bed drying applications where controlled airflow
+            and effective material processing are essential.
+            Engineered for demanding industrial environments,
+            these screens help support consistent air distribution
+            and reliable drying operations.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>02 / APPLICATIONS</h3>
+          <p>
+            Fluid Dryer Screens are used in fluid bed processing
+            systems across pharmaceutical, chemical, food processing
+            and other industrial sectors. Depending on the equipment
+            design and material requirements, they can support
+            drying, granulation and powder processing applications.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Center Image -->
+      <div class="col image-col">
+        <div class="image-wrapper">
+          <img
+            src="../img/fluid-dryer/fluid-about.jpg"
+            alt="Dinco Industries Fluid Dryer Screen for Industrial Fluid Bed Processing"
+            loading="lazy"
+          >
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col text-col">
+
+        <div class="content-block">
+          <h3>03 / PERFORMANCE & EFFICIENCY</h3>
+          <p>
+            Properly designed fluid dryer screens help maintain
+            suitable airflow through the product bed and support
+            uniform material processing. Screen opening, material
+            selection and construction can be tailored to the
+            application to help achieve dependable operation
+            and effective drying performance.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3>04 / QUALITY & SUPPORT</h3>
+          <p>
+            Dinco Industries provides industrial screening solutions
+            with a focus on application requirements, suitable
+            material selection and dependable product construction.
+            Screen specifications can be discussed according to
+            equipment compatibility, operating conditions and
+            maintenance requirements.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- paragraph section End  -->
+
+
+
+
+
+
+<!-- product section start -->
+
+
+<section class="featured-product-gallery-section fluid-gallery-section">
+  <div class="fpg-container">
+
+    <div class="fpg-header">
+      <h2></h2>
+      
+    </div>
+
+    <div class="fpg-main-wrapper">
+
+      <!-- LEFT SIDE: 6 PRODUCT IMAGES -->
+      <div class="fpg-grid-area">
+        <h3 class="fpg-sub-title"></h3>
+
+        <div class="fpg-grid">
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fluid-dryer-1.jpg"
+                alt="Industrial Fluid Dryer Screen"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fruid-dryer-banar.jpg"
+                alt="Fluid Bed Dryer Screen Panel"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fluid-about.jpg"
+                alt="Stainless Steel Fluid Dryer Screen"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fluid-dryer-1.jpg"
+                alt="Industrial Fluid Drying Screen Plate"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fruid-dryer-banar.jpg"
+                alt="Precision Perforated Fluid Dryer Screen"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="fpg-card">
+            <div class="fpg-img-box">
+              <img
+                src="../img/fluid-dryer/fluid-about.jpg"
+                alt="Custom Fluid Bed Dryer Screening Solution"
+                loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: TEXT CONTENT ONLY -->
+      <div class="fpg-highlight-area fluid-text-area">
+
+        <span class="fluid-eyebrow">INDUSTRIAL SCREENING SOLUTIONS</span>
+
+        <h3 class="fpg-sub-title">
+          Fluid Dryer Screens 
+        </h3>
+
+        <div class="fpg-featured-content">
+
+          <p>
+           They are also called Perfocon Screens. These are specially shaped holes that allow easy exit of particles/ air through the screen. These screens give a perfect result in the milling/ drying process. It enables control of airflow and sieving. The design and angle of perforation is developed to reduce the possible filling/clogging of the holes. They have a wide range of application in Fluid Bed Dryers. These are designed as per requirement of the customer.
+          </p>
+
+          <h4>Lorem ipsum dolor sit amet.</h4>
+
+          <p>
+            They are also called Perfocon Screens. These are specially shaped holes that allow easy exit of particles/ air through the screen. These screens give a perfect result in the milling/ drying process. It enables control of airflow and sieving. The design and angle of perforation is developed to reduce the possible filling/clogging of the holes. They have a wide range of application in Fluid Bed Dryers. These are designed as per requirement of the customer.
+          </p>
+
+        
+
+          <h4>Why Choose Dinco Industries?</h4>
+
+          <ul class="fluid-benefits">
+            <li>Application-specific screening solutions</li>
+            <li>Options for different screen configurations</li>
+            <li>Suitable material selection for industrial use</li>
+            <li>Support for product and equipment requirements</li>
+          </ul>
+
+
+          <ul class="fluid-benefits">
+            <li>Fluid Dryer Screen- Front</li>
+            <li>Fluid Dryer Screens-Back Side</li>
+            <li>Dryer Bed Screens</li>
+            <li>Dryer Bed Screens-Back</li>
+          </ul>
+
+          <a href="#quotation" class="fpg-cta-btn">
+            REQUEST A QUOTATION
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.fpg-header h2{
+  padding: 30px;
+  background: white;
+  color: #000;
+  font-weight: 600;
+}
+
+.fluid-gallery-section .fpg-main-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: 42px;
+  align-items: start;
+  background: #000;
+}
+
+.fluid-gallery-section .fpg-grid-area,
+.fluid-gallery-section .fpg-highlight-area {
+  min-width: 0;
+}
+
+.fluid-gallery-section .fpg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fluid-gallery-section .fpg-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e3e8ed;
+  background: #fff;
+}
+
+.fluid-gallery-section .fpg-img-box {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f1f4f6;
+}
+
+.fluid-gallery-section .fpg-img-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.fluid-gallery-section .fpg-card:hover .fpg-img-box img {
+  transform: scale(1.05);
+}
+
+.fluid-gallery-section .fluid-text-area {
+  padding: 30px;
+  background: #f5f7f9;
+  border-top: 3px solid #c69a4b;
+}
+
+.fluid-gallery-section .fluid-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #fc3a2c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.fluid-gallery-section .fluid-text-area .fpg-sub-title {
+  margin: 0 0 22px;
+  color: #122b42;
+  font-size: clamp(23px, 2.3vw, 32px);
+  line-height: 1.35;
+}
+
+.fluid-gallery-section .fpg-featured-content p {
+  margin: 0 0 20px;
+  color: #5e6b78;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.fluid-gallery-section .fpg-featured-content h4 {
+  margin: 24px 0 10px;
+  color: #18334b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.fluid-gallery-section .fluid-benefits {
+  margin: 0 0 28px;
+  padding-left: 20px;
+  color: #5e6b78;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.fluid-gallery-section .fluid-benefits li {
+  padding-left: 4px;
+  margin-bottom: 6px;
+}
+
+.fluid-gallery-section .fpg-cta-btn {
+  display: inline-block;
+  padding: 15px 22px;
+  background: #122b42;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-decoration: none;
+  transition: background .25s ease;
+}
+
+.fluid-gallery-section .fpg-cta-btn:hover {
+  background: #f72222;
+}
+
+@media (max-width: 900px) {
+  .fluid-gallery-section .fpg-main-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .fluid-gallery-section .fluid-text-area {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fluid-gallery-section .fpg-grid {
+    gap: 10px;
+  }
+
+  .fluid-gallery-section .fluid-text-area {
+    padding: 22px 18px;
+  }
+
+  .fluid-gallery-section .fpg-img-box {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<!-- HTML Structure End -->
+
+
+
+
+
+<!-- static  section start -->
+
+<section class="pro-fixed-section">
+    <div class="pro-fixed-overlay"></div>
+    <div class="pro-fixed-container">
+        <div class="pro-fixed-content">
+            <span class="pro-badge">ENGINEERING EXCELLENCE</span>
+            <h2 class="pro-heading">
+                Crafting Precision <br>
+                <span>Through Innovation</span>
+            </h2>
+            <p class="pro-description">
+                At Dinco Industries, we combine decades of craftsmanship with state-of-the-art technology to deliver unmatched industrial wire mesh and perforated screen solutions globally.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- static section End  -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer section start -->
+
+
+<footer class="footer-section">
+    <div class="footer-container">
+        
+        <!-- Column 1: Company Info & About -->
+        <div class="footer-col footer-about">
+            <h3 class="footer-logo">Dinco Industries</h3>
+            <p class="footer-desc">
+                 Under the Dinco Brand we offer a comprehensive range of screens tailored for the sugar processing sector, including Conical slot and Round hole Centrifugal Screens, Stainless steel Vacuum Mud Filter Screens,Vibrating Screens, and DSM Screens.
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+                
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Our Products</h4>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> High Quality Screen</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Wire Netting</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Fluid Dryer Screens</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Nut Shell Filter Screens</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Perforated Screens</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col footer-contact">
+            <h4 class="footer-heading">Get in Touch</h4>
+            <p>
+                <i class="fa-solid fa-location-dot"></i> 
+                Dinco House, Circular Rd, opp. Hero Honda Showroom, Khasapura, Rewari, Haryana 123401
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i> 
+                +91-9215164546
+            </p>
+            <p>
+                <i class="fa-solid fa-envelope"></i> 
+                sugar.india@dincoindustries.com
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-container">
+            <p>&copy; 2026 Dinco Overseas. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- boottom to top section start-->
+
+<div class="fab-container" id="fabContainer">
+    <!-- Professional WhatsApp Button -->
+    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello,%20I%20want%20to%20connect%20with%20you!" target="_blank" class="fab-btn fab-whatsapp" aria-label="Chat on WhatsApp">
+        <span class="fab-text">Let's Chat</span>
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="fab-btn fab-up" id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+
+<!-- boottom to top section End -->
+
+<script src="../js/index.js"></script>
+<script src="../js/product.js"></script>
+</body>
+</html>

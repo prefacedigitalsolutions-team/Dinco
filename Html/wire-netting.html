@@ -50,9 +50,10 @@
     <ul class="pro-dropdown-menu-inner">
       <li><a href="high-quality.html"><i class="fa-solid fa-display"></i> High Quality Screen</a></li>
       <li><a href="wire-netting.html"><i class="fa-solid fa-border-all"></i> Wire Netting</a></li>
-      <li><a href="#"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
-      <li><a href="#"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
-      <li><a href="#"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+      <li><a href="fluid-dryer.html"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
+      <li><a href="nut-shell.html"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
+      <li><a href="perforated.html"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+      <li><a href="sugar-mill.html"> <i class="fa-solid fa-gears"></i> Sugar Mill Screens</a></li>
     </ul>
   </div>
 </li>
@@ -318,8 +319,10 @@
 <!-- HTML Structure End -->
 
 
-<!-- CSS Styling Start -->
+
 <style>
+
+
   .uniform-product-gallery {
     background-color: #fbfbf7;
     padding: 80px 20px;
@@ -451,22 +454,87 @@
     line-height: 1.5;
   }
 
-  /* Responsive Adjustments for Mobile & Tablets */
-  @media (max-width: 992px) {
-    .uniform-product-gallery .upg-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+ /* ==========================================
+   Responsive Code Only (Tablet & Mobile)
+   ========================================== */
+
+@media (max-width: 992px) {
+  .uniform-product-gallery {
+    padding: 60px 20px;
   }
 
-  @media (max-width: 640px) {
-    .uniform-product-gallery .upg-grid {
-      grid-template-columns: 1fr;
-    }
-    .uniform-product-gallery .upg-header h2 {
-      font-size: 1.8rem;
-    }
+  .uniform-product-gallery .upg-header {
+    text-align: left;
+    margin-bottom: 35px;
   }
+
+  .uniform-product-gallery .upg-header h2 {
+    font-size: 2rem;
+  }
+
+  .uniform-product-gallery .upg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .uniform-product-gallery .upg-card {
+    padding: 14px;
+    text-align: left;
+  }
+
+  .uniform-product-gallery .upg-info {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .uniform-product-gallery {
+    padding: 45px 16px;
+  }
+
+  .uniform-product-gallery .upg-header {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .uniform-product-gallery .upg-header h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .uniform-product-gallery .upg-header p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .uniform-product-gallery .upg-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .uniform-product-gallery .upg-card {
+    padding: 12px;
+    text-align: left;
+  }
+
+  .uniform-product-gallery .upg-img-box {
+    margin-bottom: 12px;
+  }
+
+  .uniform-product-gallery .upg-info {
+    text-align: left;
+  }
+
+  .uniform-product-gallery .upg-info h3 {
+    font-size: 1rem;
+  }
+
+  .uniform-product-gallery .upg-info p {
+    font-size: 0.82rem;
+  }
+}
+
+
 </style>
 <!-- CSS Styling End -->
 

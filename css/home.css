@@ -475,58 +475,113 @@
 }
 
 
-@media (max-width:992px){
-  .web-designing-viewport{
-    width:85vw;
-    height:75vh;
-    left:50%;
-    transform:translate(-50%,-50%);
+
+/* ==========================================
+   Responsive Code Only (Tablets & Mobile)
+   ========================================== */
+
+@media (max-width: 992px) {
+  .about-section-advanced {
+    padding: 60px 20px;
   }
-  .web-designing-text{
-    font-size:clamp(3.5rem,12vw,7rem);
+
+  .web-designing-viewport {
+    width: 85vw;
+    height: 75vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .web-designing-trigger-flex{
-    gap:10px;
+
+  .web-designing-text {
+    font-size: clamp(3rem, 10vw, 6rem);
   }
-  .web-designing-image-wrapper{
-    width:90px;
-    height:60px;
+
+  .web-designing-trigger-flex {
+    gap: 10px;
   }
+
+  .web-designing-image-wrapper {
+    width: 90px;
+    height: 60px;
+  }
+
   .about-container-advanced {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .about-left-column { order: 2; }
-  .about-right-column { order: 1; }
-  .about-large-image-wrapper { height: 350px; }
-  .about-small-image-wrapper { height: 220px; }
+
+  .about-left-column { 
+    order: 2; 
+    gap: 24px;
+  } 
+
+  .about-right-column { 
+    order: 1; 
+  }
+
+  .about-large-image-wrapper { 
+    height: 400px; 
+  }
+
+  .about-small-image-wrapper { 
+    height: 240px; 
+  }
 }
 
-@media (max-width:600px){
-  .web-designing-hero{
-    padding-left:5vw;
-    justify-content:flex-start;
+@media (max-width: 600px) {
+  .about-section-advanced {
+    padding: 40px 16px;
   }
-  .web-designing-viewport{
-    width:90vw;
-    height:60vh;
-    top:35%;
-    left:50%;
-    transform:translate(-50%,-50%);
+
+  .web-designing-hero {
+    padding-left: 5vw;
+    justify-content: flex-start;
   }
-  .web-designing-text{
-    font-size:3rem;
-    line-height:.95;
+
+  .web-designing-viewport {
+    width: 90vw;
+    height: 60vh;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .web-designing-trigger-flex{
-    bottom:calc(55vh - 30vh + 10px);
-    right:5vw;
-    gap:6px;
-    padding:5px;
+
+  .web-designing-text {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+    line-height: 0.95;
   }
-  .web-designing-image-wrapper{
-    width:65px;
-    height:42px;
+
+  .web-designing-trigger-flex {
+    bottom: calc(55vh - 30vh + 10px);
+    right: 5vw;
+    gap: 6px;
+    padding: 5px;
+  }
+
+  .web-designing-image-wrapper {
+    width: 65px;
+    height: 42px;
+  }
+
+  .about-container-advanced {
+    gap: 30px;
+  }
+
+  .about-section-advanced .section-title {
+    font-size: 20px;
+  }
+
+  .about-section-advanced .section-description {
+    font-size: 12px !important;
+    line-height: 1.6;
+  }
+
+  .about-large-image-wrapper { 
+    height: 280px; 
+  }
+
+  .about-small-image-wrapper { 
+    height: 200px; 
   }
 }
 
@@ -540,6 +595,8 @@
 
 .pro-fixed-section {
     position: relative;
+
+    margin-top: 10vh;
     width: 100%;
     height: 80vh;
     min-height: 500px;
@@ -616,12 +673,62 @@
     color: #cbd5e1;
 }
 
+@media (max-width: 992px) {
+    .pro-fixed-section {
+        height: auto;
+        min-height: 450px;
+        padding: 60px 0;
+    }
+
+    .pro-heading {
+        font-size: 38px;
+    }
+}
+
 @media (max-width: 768px) {
+    .pro-fixed-section {
+        background-attachment: scroll;
+        min-height: 400px;
+        padding: 50px 0;
+    }
+
     .pro-fixed-container {
         padding: 0 20px;
     }
+
+    .pro-fixed-overlay {
+        background: linear-gradient(180deg, rgba(5, 7, 12, 0.92) 0%, rgba(5, 7, 12, 0.85) 100%);
+    }
+
+    .pro-heading {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .pro-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .pro-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
     .pro-fixed-section {
-        background-attachment: scroll;
+        padding: 40px 0;
+        min-height: 350px;
+    }
+
+    .pro-heading {
+        font-size: 25px;
+    }
+
+    .pro-description {
+        font-size: 12px;
+        line-height: 1.6;
     }
 }
  /* static section End  */
@@ -1740,9 +1847,7 @@
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
 
@@ -1811,9 +1916,7 @@
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 767px) {
 
@@ -2075,9 +2178,7 @@
     }
 
 
-    /* -----------------------------------------
-       FOOTER
-    ----------------------------------------- */
+
 
     .dinco-products-footer {
         margin-top: 35px;
@@ -2094,10 +2195,6 @@
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 480px) {
 
     .dinco-products-section {
@@ -2108,12 +2205,13 @@
 
 
     .dinco-products-heading h2 {
-        font-size: 29px;
+        font-size: 20px;
     }
 
 
     .dinco-products-heading p {
-        font-size: 13px;
+        font-size: 12px;
+        color: #000;
     }
 
 
@@ -2156,9 +2254,9 @@
 
 
     .product-arrow {
-        width: 32px;
+        width: 30px;
 
-        height: 32px;
+        height: 50px;
     }
 
 
@@ -2184,14 +2282,12 @@
     .dinco-center-inner p {
         max-width: 120px;
 
-        font-size: 8px;
+        font-size: 9px;
     }
 }
 
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2871,6 +2967,294 @@ line-height:1.8;
 }
 
 /** service section End */
+
+
+
+
+/* testemonials section strat*/
+
+
+.dinco-testimonials {
+  --dt-navy: #10283f;
+  --dt-gold: #d8a84e;
+  --dt-ink: #1b2d3e;
+  background: #f3f5f7;
+  padding: 100px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.dinco-testimonials * {
+  box-sizing: border-box;
+}
+
+.dt-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dt-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 52px;
+}
+
+.dt-eyebrow {
+  display: inline-block;
+  color: #a7792d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.dt-heading h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--dt-navy);
+  margin: 0 0 18px;
+  font-weight: 800;
+}
+
+.dt-heading h2 span {
+  color: #b8893c;
+}
+
+.dt-heading p {
+  color: #687787;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 580px;
+}
+
+.dt-slider {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.dt-track {
+  display: flex;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1);
+  align-items: stretch;
+}
+
+.dt-card {
+  position: relative;
+  flex: 0 0 calc((100% - 48px) / 3);
+  margin-right: 24px;
+  padding: 34px 30px 30px;
+  background: #fff;
+  border: 1px solid #e4e8ed;
+  border-top: 3px solid var(--dt-gold);
+  border-radius: 5px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 32px rgba(16,40,63,.045);
+  transition: box-shadow .3s, transform .3s;
+}
+
+.dt-card:hover {
+  box-shadow: 0 18px 42px rgba(16,40,63,.10);
+  transform: translateY(-4px);
+}
+
+.dt-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.dt-quote {
+  color: var(--dt-gold);
+  font-family: Georgia, serif;
+  font-size: 66px;
+  line-height: .8;
+  height: 43px;
+}
+
+.dt-stars {
+  color: #d7a440;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.dt-review {
+  color: #5e6b79;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 28px;
+  flex: 1;
+}
+
+.dt-divider {
+  height: 1px;
+  background: #e7ebef;
+  margin-bottom: 22px;
+}
+
+.dt-client {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 25px;
+}
+
+.dt-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--dt-navy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid #e9d2a6;
+}
+
+.dt-client h3 {
+  color: var(--dt-ink);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.dt-client span {
+  color: #85909b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dt-index {
+  position: absolute;
+  right: 26px;
+  bottom: 17px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #a0a9b2;
+}
+
+.dt-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.dt-pagination {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #7f8a95;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dt-current {
+  color: var(--dt-navy);
+}
+
+.dt-line {
+  width: 100px;
+  height: 2px;
+  background: #dce1e6;
+}
+
+.dt-line i {
+  display: block;
+  height: 100%;
+  width: 33.333%;
+  background: var(--dt-gold);
+  transition: width .3s;
+}
+
+.dt-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.dt-controls button {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d9dfe5;
+  background: #fff;
+  color: var(--dt-navy);
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: .25s;
+}
+
+.dt-controls button:hover {
+  background: var(--dt-navy);
+  border-color: var(--dt-navy);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .dinco-testimonials {
+    padding: 75px 22px;
+  }
+
+  .dt-card {
+    flex-basis: calc((100% - 24px) / 2);
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dinco-testimonials {
+    padding: 60px 18px;
+  }
+
+  .dt-heading {
+    margin-bottom: 35px;
+    font-size: 15px;
+  }
+
+  .dt-heading h2 {
+    letter-spacing: -.8px;
+    font-size: 20px;
+  }
+
+  .dt-heading p {
+    font-size: 12px;
+  }
+
+  .dt-card {
+    flex-basis: 100%;
+    margin-right: 0;
+    padding: 28px 24px;
+  }
+
+  .dt-review {
+    font-size: 14px;
+  }
+
+  .dt-controls button {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dt-track,
+  .dt-card,
+  .dt-controls button {
+    transition: none;
+  }
+}
+
+
+/* testemonials section start **/
                             
 
      

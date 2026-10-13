@@ -50,9 +50,10 @@
     <ul class="pro-dropdown-menu-inner">
       <li><a href="high-quality.html"><i class="fa-solid fa-display"></i> High Quality Screen</a></li>
       <li><a href="wire-netting.html"><i class="fa-solid fa-border-all"></i> Wire Netting</a></li>
-      <li><a href="#"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
-      <li><a href="#"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
-      <li><a href="#"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+      <li><a href="fluid-dryer.html"><i class="fa-solid fa-wind"></i> Fluid Dryer Screens</a></li>
+      <li><a href="nut-shell.html"><i class="fa-solid fa-filter"></i> Nut Shell Filter Screens</a></li>
+      <li><a href="high-quality.html"><i class="fa-solid fa-braille"></i> Perforated Screens</a></li>
+      <li><a href="sugar-mill.html"> <i class="fa-solid fa-gears"></i> Sugar Mill Screens</a></li>
     </ul>
   </div>
 </li>
@@ -335,11 +336,12 @@
     </div>
   </div>
 </section>
+
 <!-- HTML Structure End -->
 
 
-<!-- CSS Styling Start -->
 <style>
+
   .featured-product-gallery-section {
     background-color: #fbfbf7;
     padding: 60px 20px;
@@ -520,27 +522,66 @@
     background-color: #24422e;
   }
 
-  /* Responsive Design for Tablets and Mobiles */
-  @media (max-width: 1024px) {
-    .featured-product-gallery-section .fpg-main-wrapper {
-      flex-direction: column;
-    }
-    .featured-product-gallery-section .fpg-highlight-area {
-      width: 100%;
-    }
+
+
+  @media (max-width: 992px) {
+  .featured-product-gallery-section {
+    padding: 50px 16px;
   }
 
-  @media (max-width: 768px) {
-    .featured-product-gallery-section .fpg-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .featured-product-gallery-section .fpg-main-wrapper {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  @media (max-width: 480px) {
-    .featured-product-gallery-section .fpg-grid {
-      grid-template-columns: 1fr;
-    }
+  .featured-product-gallery-section .fpg-grid-area,
+  .featured-product-gallery-section .fpg-highlight-area {
+    width: 100%;
+    flex: none;
   }
+}
+
+@media (max-width: 768px) {
+  .featured-product-gallery-section .fpg-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .featured-product-gallery-section .fpg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-product-gallery-section {
+    padding: 40px 12px;
+  }
+
+  .featured-product-gallery-section .fpg-header h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .featured-product-gallery-section .fpg-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .featured-product-gallery-section .fpg-featured-card {
+    padding: 15px;
+  }
+
+  .featured-product-gallery-section .fpg-featured-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .featured-product-gallery-section .fpg-featured-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
 </style>
 <!-- CSS Styling End -->
 
